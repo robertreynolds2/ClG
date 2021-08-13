@@ -15,5 +15,5 @@ echo VNC Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "Ctrl+C To Copy"
 echo "Dont Close This Tab"
-./dist/proot -S . qemu-system-x86_64 -vnc :0 -hda akuhnet-w7x64.img -smp cores=4 -m 16G -machine usb=on -device usb-tablet -vga nvidia > /dev/null 2>&1
+./dist/proot -S . qemu-system-x86_64 -vnc :0 -hda akuhnet-w7x64.img -smp cores=4 -m 16G -machine usb=on -device usb-tablet -vga vmware > /dev/null 2>&1
 sleep 43200
