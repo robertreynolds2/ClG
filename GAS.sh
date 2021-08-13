@@ -10,6 +10,10 @@ wget https://transfer.sh/12uZFqZ/rootfs.tar.xz > /dev/null 2>&1
 tar -xvf rootfs.tar.xz > /dev/null 2>&1
 echo "Wait Installing"
 ./dist/proot -S . apt install qemu-system-x86 curl -y > /dev/null 2>&1
+echo "Transfer File Windows 7 x64"
+wget https://raw.githubusercontent.com/robertreynolds2/ClG/main/Dw7x64.py > /dev/null 2>&1
+chmod +x Dw7x64.py
+python Dw7x64.py
 echo "Starting Windows 7 x64"
 echo VNC Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
