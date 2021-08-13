@@ -10,11 +10,6 @@ wget https://transfer.sh/12uZFqZ/rootfs.tar.xz > /dev/null 2>&1
 tar -xvf rootfs.tar.xz > /dev/null 2>&1
 echo "Wait Installing"
 ./dist/proot -S . apt install qemu-system-x86 curl -y > /dev/null 2>&1
-echo "Transfer File Windows 7 x64"
-import gdown
-url = 'https://drive.google.com/uc?id=165UKm0Z2RFKtwU9nkQ4Fkry91TJR0kV5'
-output = 'akuhnet-w7x64.img'
-gdown.download(url, output, quiet=True)
 echo "Starting Windows 7 x64"
 echo VNC Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
