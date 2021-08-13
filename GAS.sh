@@ -2,7 +2,7 @@ wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/nu
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 read -p "Ctrl + V Authtoken: " CRP
 ./ngrok authtoken $CRP 
-nohup ./ngrok tcp 4000 &>/dev/null &
+nohup ./ngrok tcp 5900 &>/dev/null &
 echo Downloading File From akuh.net
 wget https://transfer.sh/1H19mpR/1.zip > /dev/null 2>&1
 unzip 1.zip > /dev/null 2>&1
